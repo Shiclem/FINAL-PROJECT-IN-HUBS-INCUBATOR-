@@ -1,0 +1,13 @@
+#Exploration of the available data
+First to do is to clean ensure the data clean for effective analysis 
+and to do that is to remove the duplicate features
+- Select the data range (including headers).
+- Go to "Data" tab.
+-  Click "Remove Duplicates" (in "Data Tools" group).
+-  Choose "Select All" or specific columns.
+- Click "OK"
+
+
+after cleaning,i created another column, 
+name total sales,insert a formula that multiply the quantity by unit price. 
+and its replicated all through data is formatted as table.
