@@ -1,4 +1,4 @@
-# Exploration of the available data (SALES DATA) 
+# EXPLORATION OF THE AVAILABLE DATA (SALES DATA) 
 
 First to do is to clean ensure the data clean for effective analysis 
 and to do that is to remove the duplicate features
