@@ -12,12 +12,36 @@ and its replicated all through data is formatted as table.[sales data.csv](https
 
 ### TO GET THE TOP SELLING 
  	
-Row Labels	Sum of Quantity
-Gloves	       62,500.00
-Hat          	80,000.00
-Shirt       	62,500.00
-Shoes        	72,500.00
-Grand      Total	277,500.00
-![image](https://github.com/user-attachments/assets/3ec24ff7-e1c8-4d6d-abf1-4e468f5bb90d)
+![TOP SELLING](https://github.com/user-attachments/assets/23f24b68-c133-4f77-a9fc-cc9f1af27d42)
+
+Sales revenue : total sales = price * quantity.
+
+### TO GET REGIONAL PERFORMANCE 
+
+![REGIONAL PERFORMANCE](https://github.com/user-attachments/assets/8aa38b18-01e5-4d91-a963-a5457663dede)
+
+regional sales revenue : total sales within a region
+
+### TO GET MONTHLY TREND 
+![TOP SALES TREND](https://github.com/user-attachments/assets/864a1d23-3156-4506-b956-8484289edc8f)
+
+TMS = (Daily sales ) within a month ( sum of sales for month)
+
+### TO GET TOTAL SALES BY PRODUCT
+![TOP SELLING](https://github.com/user-attachments/assets/f50c755c-22ad-4afa-b51b-789525c27ef6)
+- Total sales by products = quantity sold * price per unit
+
+### TO GET TOTAL SALES BY REGION
+![TOTAL SALES BY REGION](https://github.com/user-attachments/assets/78d6e7f8-09b9-4916-b99a-de104c2257b2)
+
+ Total sales by region = ( sales revenue for each region )
+
+### TO GET TOTAL SALES BY MONTH 
+![TOP SALES BY MONTH](https://github.com/user-attachments/assets/32aecfdb-785b-4ccb-aec3-9c0d06907535)
+
+Total sales by month ( Daily sales for each month) 
+
+
+
 
 
