@@ -6,11 +6,13 @@ and to do that is to remove the duplicate features
 - Go to "Data" tab.
 -  Click "Remove Duplicates" (in "Data Tools" group).
 -  Choose "Select All" or specific columns.
-- Click "OK" .  After cleaning,i created another column, ![average sales](https://github.com/user-attachments/assets/d4d1a23d-b814-4c63-a5a9-5c781fa86ef2)
+- Click "OK" .  After cleaning, i created another column, 
+- name total sales,inserted a formula that multiply the quantity by unit price. 
+and its replicated all through data is formatted as table.[sales data.csv](https://github.com/user-attachments/files/17629480/sales.data.csv) and 
+[CUSTOMER DATA project .csv](https://github.com/user-attachments/files/17630782/CUSTOMER.DATA.project.csv)
 
-name total sales,insert a formula that multiply the quantity by unit price. 
-and its replicated all through data is formatted as table.[sales data.csv](https://github.com/user-attachments/files/17629480/sales.data.csv)
 ------------------------------------------------
+
 ## TO GET THE TOP SELLING 
  	
 Sales revenue : total sales = price * quantity.
@@ -26,6 +28,7 @@ regional sales revenue : total sales within a region
 ![REGIONAL PERFORMANCE](https://github.com/user-attachments/assets/8aa38b18-01e5-4d91-a963-a5457663dede)
 
 ------------------------------------------------------------
+
 ## TO GET MONTHLY TREND 
 
 TMS = sum (Daily sales ) within a month ( sum of sales for month)
@@ -41,6 +44,7 @@ TMS = sum (Daily sales ) within a month ( sum of sales for month)
 ![TOP SELLING](https://github.com/user-attachments/assets/f50c755c-22ad-4afa-b51b-789525c27ef6)
 ---------------------------------------------------------
 
+
 ## TO GET TOTAL SALES BY REGION
 
  Total sales by region = ( sales revenue for each region )
@@ -48,6 +52,7 @@ TMS = sum (Daily sales ) within a month ( sum of sales for month)
 ![TOTAL SALES BY REGION](https://github.com/user-attachments/assets/78d6e7f8-09b9-4916-b99a-de104c2257b2)
 
 ------------------------------------------------------
+
 ## TO GET TOTAL SALES BY MONTH 
 
 Total sales by month ( Daily sales for each month) 
