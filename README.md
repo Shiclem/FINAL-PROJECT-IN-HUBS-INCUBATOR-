@@ -74,3 +74,64 @@ total revenue by region = number of sales transactions * average sale price for 
 
 ![total revenue](https://github.com/user-attachments/assets/3cdaa702-b69b-4386-8a29-18c4b605a8d3)
 
+
+
+   # ``````````````````'''''''''' SQL'''''''''''''''```````````````
+
+[sales data.csv](https://github.com/user-attachments/files/17630814/sales.data.csv)
+was loaded into the sql serve to extract the key insights based on this following question: 
+
+- The first approach is to create database containing the dataset (LITA_CAPSTONE_PROJECT)
+
+```select * from [dbo].[sales data]```
+
+## .............TO RETRIEVE THE TOTAL SALES FOR EACH PRODUCT CATEGORY . ......
+
+select PRODUCT,SUM (quantity)AS tatal_sales
+from [dbo].[sales data]
+group by 
+Product;
+
+## .................TO FIND THE NUMBER OF SALES TRANSACTION IN EACH REGION ............
+
+select REGION,
+COUNT (*) as NUMBER_OF_SALES
+from [dbo].[sales data]
+group by
+region 
+
+
+## ......................... TO DELETE THE NULL FROM THE DATASET..........................
+
+DELETE FROM [dbo].[sales data]
+WHERE REGION IS NULL;
+
+## ............TO FIND THE HIGHEST-SELLING PRODUCT BY TOTAL SALES VALUE.................................
+
+Select TOP 1
+SUM(quantity) as totalsales_Top,product
+From [dbo].[sales data]
+group by product
+order by
+sum (quantity)desc;
+
+## ...........TO CALCULATE MONTHLY SALES TOTALS FOR THE CURRENT YEAR.....................
+
+select region,count (TOTAL_SALES)AS count_sales
+from [dbo].[sales data]
+group by region
+order by count (total_sales)
+SELECT PRODUCT,
+SUM (REVENUE)AS TOTALSALES
+FROM [dbo].[sales data]
+GROUP BY PRODUCT;
+
+## .........TO CALCULATE MONTHLY SALES TOTALS FOR THE CURRENT YEAR ....................
+
+select MONTH (orderdate) AS month,
+sum (Total_sales) AS monthly_sales
+from [dbo].[sales data]
+where YEAR (orderdate)=YEAR(GETDATE())
+GROUP BY MONTH (ORDERDATE);
+
+
