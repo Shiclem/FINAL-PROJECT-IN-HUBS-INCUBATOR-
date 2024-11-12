@@ -87,36 +87,44 @@ was loaded into the sql serve to extract the key insights based on this followin
 
 ## .............TO RETRIEVE THE TOTAL SALES FOR EACH PRODUCT CATEGORY . ......
 
+````
 select PRODUCT,SUM (quantity)AS tatal_sales
 from [dbo].[sales data]
 group by 
 Product;
+````
 
 ## .................TO FIND THE NUMBER OF SALES TRANSACTION IN EACH REGION ............
 
+````
 select REGION,
 COUNT (*) as NUMBER_OF_SALES
 from [dbo].[sales data]
 group by
 region 
-
+````
 
 ## ......................... TO DELETE THE NULL FROM THE DATASET..........................
 
+````
 DELETE FROM [dbo].[sales data]
 WHERE REGION IS NULL;
+````
 
-## ............TO FIND THE HIGHEST-SELLING PRODUCT BY TOTAL SALES VALUE.................................
+## ............TO FIND THE HIGHEST-SELLING PRODUCT BY TOTAL SALES VALUE.............................
 
+````
 Select TOP 1
 SUM(quantity) as totalsales_Top,product
 From [dbo].[sales data]
 group by product
 order by
 sum (quantity)desc;
+````
 
 ## ...........TO CALCULATE MONTHLY SALES TOTALS FOR THE CURRENT YEAR.....................
 
+````
 select region,count (TOTAL_SALES)AS count_sales
 from [dbo].[sales data]
 group by region
@@ -125,13 +133,40 @@ SELECT PRODUCT,
 SUM (REVENUE)AS TOTALSALES
 FROM [dbo].[sales data]
 GROUP BY PRODUCT;
+````
 
 ## .........TO CALCULATE MONTHLY SALES TOTALS FOR THE CURRENT YEAR ....................
 
+````
 select MONTH (orderdate) AS month,
 sum (Total_sales) AS monthly_sales
 from [dbo].[sales data]
 where YEAR (orderdate)=YEAR(GETDATE())
 GROUP BY MONTH (ORDERDATE);
+````
 
+## ....Find the top 5 customers by total purchases amount...
+
+````
+Select top 5 customers_ Id,Sum(total sales ) AS TOTALPURCHASEAMOUNT)
+FROM [dbo].[customer data]
+GROUP BY customer_id
+order by totalpurchasesamount DESC; 
+````
+
+## ... calculate the percentage of total sales contributed by each region....
+
+````
+select region, SUM ( sales) As regiontotalsales, sum( Quality * unit price) x 1.0/( select sum( quality*unit)
+from [dbo].[ total sale] AS percentage of total sales
+from [dbo].[ total sales]
+group by region
+````
+## ... Identify products with no sales in the last quarter....
+
+````
+select product
+from sales data group by product,
+HAVING SUM ( CASE WHEN ORDER BY DATE BETWEEN '2024-06-01'AND '2024-08-31' THEN 1 ELSE 0 END )=0
+````
 
