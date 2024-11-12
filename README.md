@@ -76,7 +76,8 @@ total revenue by region = number of sales transactions * average sale price for 
 
 
 
-   # ``````````````````'''''''''' SQL'''''''''''''''```````````````
+
+   # ````' SQL '''''''
 
 [sales data.csv](https://github.com/user-attachments/files/17630814/sales.data.csv)
 was loaded into the sql serve to extract the key insights based on this following question: 
@@ -162,6 +163,7 @@ from [dbo].[ total sale] AS percentage of total sales
 from [dbo].[ total sales]
 group by region
 ````
+
 ## ... Identify products with no sales in the last quarter....
 
 ````
@@ -170,8 +172,12 @@ from sales data group by product,
 HAVING SUM ( CASE WHEN ORDER BY DATE BETWEEN '2024-06-01'AND '2024-08-31' THEN 1 ELSE 0 END )=0
 ````
 
-# ....  TO CREATE A DASHBOARD THAT WILL VISUALIZES THE INSIGHTS FOUND IN EXCEL AND SQL.... 
+# .....POWER BI ....
 
-### ... THIS VISUALISATIONS WULL INCLUDE SALES OVERVIEW, TOP PERFORMING PRODUCTS AND REGIONAL BREAKDOWNS. 
+
+## ....  TO CREATE A DASHBOARD THAT WILL VISUALIZES THE INSIGHTS FOUND IN EXCEL AND SQL.... 
+
+
+### ... THIS VISUALISATIONS WILL INCLUDE SALES OVERVIEW, TOP PERFORMING PRODUCTS AND REGIONAL BREAKDOWNS. 
 
 ![IMG-20241017-WA0090](https://github.com/user-attachments/assets/668a3f7e-1938-490c-b519-ad9a052b2e71)
